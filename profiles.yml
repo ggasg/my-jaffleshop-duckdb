@@ -1,0 +1,14 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'jaffle_shop.duckdb'
+      threads: 24
+    qa:
+      type: databricks
+      catalog: gaston_guitart_cat
+      schema: dbt_testing
+      host: adb-984752964297111.11.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/9d681ee15a93cdbb
+      token: #####
